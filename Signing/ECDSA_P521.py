@@ -14,7 +14,7 @@ def generate_pk():
     frase = "ProyectoCrypto123_!ñ"
 
     # Exportación de la clave privada a un archivo en formato .pem
-    with open("private_key_secp521r1.pem", "wb") as f:
+    with open("Signing/private_key_secp521r1.pem", "wb") as f:
         f.write(private_key.private_bytes(
             encoding=serialization.Encoding.PEM,
             format=serialization.PrivateFormat.PKCS8,
@@ -35,7 +35,7 @@ def signing(file):
         archivo = imageFile.read()
 
     # Apertura de la clave privada desde el archivo exportado.
-    with open("private_key_secp521r1.pem", "rb") as f:
+    with open("Signing/private_key_secp521r1.pem", "rb") as f:
         private_key_bytes = f.read()
         private_key = serialization.load_pem_private_key(
             private_key_bytes,
