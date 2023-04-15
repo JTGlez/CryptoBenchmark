@@ -1,5 +1,4 @@
 import RSA_PSS, ECDSA_P521, ED25519
-import matplotlib.pyplot as plt
 import time
 
 archivo = 'TestVectors/text.txt'
