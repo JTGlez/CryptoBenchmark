@@ -15,6 +15,4 @@ install('ecdsa')
 install('cryptography')
 
 #Ejecución de los scripts.
-subprocess.call(['python','./run_CipherDecipher.py'])
-subprocess.call(['python','./run_Hashing.py'])
-subprocess.call(['python','./run_Signature.py'])
+subprocess.call(['python','./run_Benchmark.py'])
