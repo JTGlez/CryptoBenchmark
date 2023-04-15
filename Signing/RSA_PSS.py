@@ -28,7 +28,7 @@ def generate_keys():
 #---------------------------PROCESO DE FIRMADO Y VERIFICACIÓN---------------------------------#
 
 def signing(file):
-    """Realiza el proceso de firma y verificación de la firma sobre un archivo vector de prueba."""
+    """Realiza el proceso de firma y verificación de la firma sobre un archivo vector de prueba con RSA-PSS."""
 
     # Se obtiene el par de claves con la función generate_keys y sus correspondientes archivos en formato .pem. Se recupera la passphrase.
     frase = generate_keys()
@@ -50,6 +50,6 @@ def signing(file):
     # Verificación de firma legítima o apócrifa.
     try:
         verificador.verify(hash, firma)
-        print ("Firma auténtica y validada.")
+        print ("Firma auténtica y validada con RSA-PSS.")
     except (ValueError, TypeError):
         print ("Firma inválida.")

@@ -5,7 +5,7 @@ import base64
 
 #---------------------------PROCESO DE FIRMADO Y VERIFICACIÓN---------------------------------#
 def signing(file):
-    """Realiza el proceso de firma y verificación de la firma sobre un archivo vector de prueba."""
+    """Realiza el proceso de firma y verificación de la firma sobre un archivo vector de prueba con ECDSA-P521 NIST."""
 
      # Generación de una clave privada aleatoria sobre curva elíptica secp521r1.
     private_key = ec.generate_private_key(ec.SECP521R1())
@@ -22,6 +22,6 @@ def signing(file):
         public_key = private_key.public_key()
         public_key.verify(signature, archivo, ec.ECDSA(hashes.SHA256()))
         print(base64.b64encode(signature))
-        print ("Firma auténtica y validada.")
+        print ("Firma auténtica y validada con ECDSA-P521.")
     except (ValueError, TypeError):
         print ("Firma inválida.")
