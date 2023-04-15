@@ -25,4 +25,3 @@ ecdsa_p521_time = benchmarkECDSA521()
 
 print("Tiempo de RSA-PSS con el vector de prueba: ", rsa_pss_time, "segundos.")
 print("Tiempo de ECDSA_P521 con el vector de prueba: ", ecdsa_p521_time, "segundos.")
-
