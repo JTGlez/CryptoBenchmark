@@ -6,6 +6,7 @@ from chacha_encryptor import FileEncryptor_ChaCha20
 import matplotlib.pyplot as plt
 
 archivos_prueba = ['file.pdf', 'img.PNG', 'text.txt']
+num_executions = 5  # Número de veces que se ejecutará cada algoritmo
 
 algoritmos = {
     'AES_CBC': FileEncryptorAES_CBC,
@@ -23,33 +24,42 @@ for file in archivos_prueba:
 
     for name, Algorithm in algoritmos.items():
         labels.append(name)
-        alg = Algorithm(file)
+        total_encryption_time = 0
+        total_decryption_time = 0
 
-        start_time = time.time()
-        alg.cipher()
-        elapsed_time_encryption = time.time() - start_time
+        for _ in range(num_executions):
+            alg = Algorithm(file)
 
-        start_time = time.time()
-        alg.decipher()
-        elapsed_time_decryption = time.time() - start_time
+            start_time = time.time()
+            alg.cipher()
+            elapsed_time_encryption = time.time() - start_time
+            total_encryption_time += elapsed_time_encryption
 
-        encryption_times.append(elapsed_time_encryption)
-        decryption_times.append(elapsed_time_decryption)
+            start_time = time.time()
+            alg.decipher()
+            elapsed_time_decryption = time.time() - start_time
+            total_decryption_time += elapsed_time_decryption
 
-        os.remove(alg.name + '_' + name + '.bin')
-        os.remove(alg.name + '_' + name + '_desc' + alg.ext)
+            os.remove(alg.name + '_' + name + '.bin')
+            os.remove(alg.name + '_' + name + '_desc' + alg.ext)
+
+        avg_encryption_time = total_encryption_time / num_executions
+        avg_decryption_time = total_decryption_time / num_executions
+
+        encryption_times.append(avg_encryption_time)
+        decryption_times.append(avg_decryption_time)
 
     # Graficar tiempos de encriptación
     plt.bar(labels, encryption_times, color=colors)
     plt.xlabel("Algoritmos")
-    plt.ylabel("Tiempo (s)")
-    plt.title(f'Tiempos de encriptación para {file}')
+    plt.ylabel("Tiempo promedio (s)")
+    plt.title(f'Tiempos promedio de encriptación para {file} ({num_executions} ejecuciones)')
     plt.show()
 
     # Graficar tiempos de desencriptación
     plt.bar(labels, decryption_times, color=colors)
     plt.xlabel("Algoritmos")
-    plt.ylabel("Tiempo (s)")
-    plt.title(f'Tiempos de desencriptación para {file}')
+    plt.ylabel("Tiempo promedio (s)")
+    plt.title(f'Tiempos promedio de desencriptación para {file} ({num_executions} ejecuciones)')
     plt.show()
 
