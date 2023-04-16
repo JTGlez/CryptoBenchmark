@@ -5,6 +5,7 @@
 CryptoBenchmark es un proyecto desarrollo dentro de la asignatura de Criptografía de la FI UNAM. Consiste en la implementación de los siguientes algoritmos de cifrado, descifrado, hasheo y firma digital:
 
 * Cifrado/Descifrado 
+
 | Algoritmo | Tamaño |
 | ------ | ------ |
 | Chacha20 |  256 bits |
@@ -13,6 +14,7 @@ CryptoBenchmark es un proyecto desarrollo dentro de la asignatura de Criptograf�
 | RSA-OAEP | 2048 bits |
 
 * Hasheo 
+
 | Algoritmo | Tamaño |
 | ------ | ------ |
 | SHA-2 | 512 bits |
@@ -20,6 +22,9 @@ CryptoBenchmark es un proyecto desarrollo dentro de la asignatura de Criptograf�
 | Scrypt | Output 32 bits |
 
 * Firmado
+
+| Algoritmo | Tamaño |
+| ------ | ------ |
 | RSA-PSS | 2048 bits |
 | ECDSA P521 | 521 Bits (secp521r1) |
 | EdDSA | 32 Bits (Ed25519) |
