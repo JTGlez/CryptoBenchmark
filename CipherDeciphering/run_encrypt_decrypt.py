@@ -1,8 +1,8 @@
 import time
 import os
-from aes_cbc_encryptor import FileEncryptorAES_CBC
-from aes_ecb_encryptor import FileEncryptorAES_ECB
-from chacha_encryptor import FileEncryptor_ChaCha20
+from .aes_cbc_encryptor import FileEncryptorAES_CBC
+from .aes_ecb_encryptor import FileEncryptorAES_ECB
+from .chacha_encryptor import FileEncryptor_ChaCha20
 
 def generate_results(file, num_executions):
     algoritmos = {
