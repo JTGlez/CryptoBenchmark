@@ -1,7 +1,6 @@
 #Importación de bibliotecas.
 import subprocess
 import sys
-import runpy
 
 #Instalación de paquetes en el environment de ejecución.
 def install(package):
