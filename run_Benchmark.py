@@ -8,13 +8,13 @@
 from Signing import run_Signature
 import subprocess
 import matplotlib.pyplot as plt
-from run_encrypt_decrypt import generate_results
-from plotter import plot_results
+from CipherDeciphering.run_encrypt_decrypt import generate_results
+from CipherDeciphering.plotter import plot_results
 
 
 #--------------------------Gráficas de Cifrado-------------------------------------#
 
-archivos_prueba = ['file.pdf', 'img.PNG', 'text.txt']
+archivos_prueba = ['TestVectors/file.pdf', 'TestVectors/img.PNG', 'TestVectors/text.txt']
 num_executions = 5
 
 for file in archivos_prueba:
