@@ -4,11 +4,9 @@
 #          -Cruz Rangel Leonardo Said
 #          -Téllez González Jorge Luis
 
-#Importación de bibliotecas.
+# Importación de bibliotecas.
 from Signing import run_Signature
-import subprocess
-import matplotlib as mpl
-from CipherDeciphering.run_encrypt_decrypt import generate_results
+from CipherDeciphering.results_generator import generate_results
 from CipherDeciphering.plotter import plot_results
 
 archivos_prueba = ['file.pdf', 'img.PNG', 'text.txt']
