@@ -1,4 +1,5 @@
-import RSA_PSS, ECDSA_P521, ED25519
+from Signing import RSA_PSS, ECDSA_P521, ED25519
+#import RSA_PSS, ECDSA_P521, ED25519
 import time
 
 archivoTXT = 'TestVectors/text.txt'
@@ -33,13 +34,14 @@ def signingTime():
     """Ejecuta los benchmarks 100 veces y almacena el tiempo total obtenido para cada uno de ellos."""
 
     signing_time = []
+    benchmark_loop = 10
 
     # Benchmark para RSA-PSS.
     total_time_RSA_PSS_TXT = 0 
     total_time_RSA_PSS_PDF = 0 
     total_time_RSA_PSS_IMG = 0 
 
-    for i in range(100):
+    for i in range(benchmark_loop):
         total_time_RSA_PSS_TXT += benchmark_RSA_PSS(archivoTXT)
         total_time_RSA_PSS_PDF += benchmark_RSA_PSS(archivoPDF)
         total_time_RSA_PSS_IMG += benchmark_RSA_PSS(archivoIMG)
@@ -54,7 +56,7 @@ def signingTime():
     total_time_ECDSA_PDF = 0 
     total_time_ECDSA_IMG = 0 
 
-    for i in range(100):
+    for i in range(benchmark_loop):
         total_time_ECDSA_TXT += benchmark_ECDSA521(archivoTXT)
         total_time_ECDSA_PDF += benchmark_ECDSA521(archivoPDF)
         total_time_ECDSA_IMG += benchmark_ECDSA521(archivoIMG)
@@ -69,7 +71,7 @@ def signingTime():
     total_time_ED25519_PDF = 0 
     total_time_ED25519_IMG = 0 
 
-    for i in range(100):
+    for i in range(benchmark_loop):
         total_time_ED25519_TXT += benchmark_ED25519(archivoTXT)
         total_time_ED25519_PDF += benchmark_ED25519(archivoPDF)
         total_time_ED25519_IMG += benchmark_ED25519(archivoIMG)
@@ -80,6 +82,3 @@ def signingTime():
     signing_time.append(total_time_ED25519_IMG/100)
 
     return signing_time
-
-signingTiming = signingTime()
-print(signingTiming)
