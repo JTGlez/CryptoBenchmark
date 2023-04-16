@@ -8,5 +8,15 @@
 from Signing import run_Signature
 import subprocess
 import matplotlib as mpl
+from run_encrypt_decrypt import generate_results
+from plotter import plot_results
+
+archivos_prueba = ['file.pdf', 'img.PNG', 'text.txt']
+num_executions = 5
+
+for file in archivos_prueba:
+    print(f"Procesando archivo {file}")
+    labels, encryption_times, decryption_times = generate_results(file, num_executions)
+    plot_results(file, labels, encryption_times, decryption_times, num_executions)
 
 signing_times = run_Signature.signingTime()
