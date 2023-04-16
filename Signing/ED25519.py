@@ -28,7 +28,8 @@ def signing(file):
     """Realiza el proceso de firma y verificación de la firma sobre un archivo vector de prueba con Ed25519."""
 
     # Genera la clave privada sobre la curva Ed25519, recupera el passphrase.
-    frase = generate_pk()
+    #frase = generate_pk()
+    frase = "ProyectoCrypto123_!ñ"
 
     # Apertura del archivo a firmar en formato binario.
     with open(file, "rb") as imageFile:

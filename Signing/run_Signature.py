@@ -34,7 +34,7 @@ def signingTime():
     """Ejecuta los benchmarks 100 veces y almacena el tiempo total obtenido para cada uno de ellos."""
 
     signing_time = []
-    benchmark_loop = 10
+    benchmark_loop = 100
 
     # Benchmark para RSA-PSS.
     total_time_RSA_PSS_TXT = 0 
@@ -82,3 +82,12 @@ def signingTime():
     signing_time.append(total_time_ED25519_IMG/benchmark_loop)
 
     return signing_time
+
+
+total_time_RSA_PSS_TXT = 0
+total_time_RSA_PSS_PDF = 0
+total_time_RSA_PSS_IMG = 0
+
+total_time_RSA_PSS_TXT += benchmark_RSA_PSS(archivoTXT)
+total_time_RSA_PSS_PDF += benchmark_RSA_PSS(archivoPDF)
+total_time_RSA_PSS_IMG += benchmark_RSA_PSS(archivoIMG)

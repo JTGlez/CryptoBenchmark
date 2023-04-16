@@ -31,7 +31,8 @@ def signing(file):
     """Realiza el proceso de firma y verificación de la firma sobre un archivo vector de prueba con RSA-PSS."""
 
     # Se obtiene el par de claves con la función generate_keys y sus correspondientes archivos en formato .pem. Se recupera la passphrase.
-    frase = generate_keys()
+    #frase = generate_keys()
+    frase = "ProyectoCrypto123_!ñ"
 
     # Apertura del archivo a firmar en formato binario.
     with open(file, "rb") as imageFile:
@@ -53,3 +54,4 @@ def signing(file):
         print ("Firma auténtica y validada con RSA-PSS.")
     except (ValueError, TypeError):
         print ("Firma inválida.")
+
