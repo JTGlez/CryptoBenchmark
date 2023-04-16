@@ -29,6 +29,33 @@ CryptoBenchmark es un proyecto desarrollo dentro de la asignatura de Criptograf�
 | ECDSA P521 | 521 Bits (secp521r1) |
 | EdDSA | 32 Bits (Ed25519) |
 
+
+## 📋 Requerimientos
+
+- Python 3.6 o superior
+- matplotlib
+- Crypto
+- pycryptodome
+- cryptography
+- rsa
+
+## 🚀 Funcionamiento
+
+```bash
+# Ejecutar el archivo main.py. Este script instalará las dependencias necesarias y ejecutará automáticamente el benchmark.
+python main.py
+
+```
+Se consideran 3 vectores de prueba consistentes en un archivo.txt, un pdf y una imagen en formato .png, qque se encuentran en la carpeta TestVectors. Estos archivos pueden ser modificables por otros archivos, siempre y cuando contengan el mismo nombre. 
+
+```python
+archivoTXT = 'TestVectors/text.txt'
+archivoPDF = 'TestVectors/file.pdf'
+archivoIMG = 'TestVectors/img.png'
+```
+
+Si desea añadir otros archivos de distinta naturaleza, modifique la ruta del archivo en los scripts run_Benchmark y run_Signature.
+
 ## Autores
 
 - [David Jiménez](https://github.com/Derek533z)
