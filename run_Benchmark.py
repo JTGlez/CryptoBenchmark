@@ -8,8 +8,8 @@
 from Signing import run_Signature
 import subprocess
 import matplotlib as mpl
-from run_encrypt_decrypt import generate_results
-from plotter import plot_results
+from CipherDeciphering.run_encrypt_decrypt import generate_results
+from CipherDeciphering.plotter import plot_results
 
 archivos_prueba = ['file.pdf', 'img.PNG', 'text.txt']
 num_executions = 5
