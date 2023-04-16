@@ -9,3 +9,4 @@ from Signing import run_Signature
 import subprocess
 import matplotlib as mpl
 
+signing_times = run_Signature.signingTime()
