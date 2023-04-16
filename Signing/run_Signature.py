@@ -47,9 +47,9 @@ def signingTime():
         total_time_RSA_PSS_IMG += benchmark_RSA_PSS(archivoIMG)
     
     #Almacenamos los tiempos de ejecución para RSA. 0-1-2
-    signing_time.append(total_time_RSA_PSS_TXT/100)
-    signing_time.append(total_time_RSA_PSS_PDF/100)
-    signing_time.append(total_time_RSA_PSS_IMG/100)
+    signing_time.append(total_time_RSA_PSS_TXT/benchmark_loop)
+    signing_time.append(total_time_RSA_PSS_PDF/benchmark_loop)
+    signing_time.append(total_time_RSA_PSS_IMG/benchmark_loop)
 
     # Benchmark para ECDSA P521-NIST.
     total_time_ECDSA_TXT = 0 
@@ -62,9 +62,9 @@ def signingTime():
         total_time_ECDSA_IMG += benchmark_ECDSA521(archivoIMG)
     
     #Almacenamos los tiempos de ejecución para ECDSA. 3-4-5
-    signing_time.append(total_time_ECDSA_TXT/100)
-    signing_time.append(total_time_ECDSA_PDF/100)
-    signing_time.append(total_time_ECDSA_IMG/100)
+    signing_time.append(total_time_ECDSA_TXT/benchmark_loop)
+    signing_time.append(total_time_ECDSA_PDF/benchmark_loop)
+    signing_time.append(total_time_ECDSA_IMG/benchmark_loop)
 
     # Benchmark para Ed25519.
     total_time_ED25519_TXT = 0 
@@ -77,8 +77,8 @@ def signingTime():
         total_time_ED25519_IMG += benchmark_ED25519(archivoIMG)
 
     #Almacenamos los tiempos de ejecución para ED25519. 6-7-8
-    signing_time.append(total_time_ED25519_TXT/100)
-    signing_time.append(total_time_ED25519_PDF/100)
-    signing_time.append(total_time_ED25519_IMG/100)
+    signing_time.append(total_time_ED25519_TXT/benchmark_loop)
+    signing_time.append(total_time_ED25519_PDF/benchmark_loop)
+    signing_time.append(total_time_ED25519_IMG/benchmark_loop)
 
     return signing_time
