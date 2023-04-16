@@ -1,4 +1,4 @@
-<h1 align="center"> CryptoBenchmark </h1>
+<h1 align="center"> CryptoBenchmark :lock_with_ink_pen:	 </h1>
 
 # Introducción
 
