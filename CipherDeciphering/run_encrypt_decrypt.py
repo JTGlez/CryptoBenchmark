@@ -3,12 +3,14 @@ import os
 from .aes_cbc_encryptor import FileEncryptorAES_CBC
 from .aes_ecb_encryptor import FileEncryptorAES_ECB
 from .chacha_encryptor import FileEncryptor_ChaCha20
+from .rsa_oaep_encryptor import FileEncryptor_RSA_OAEP
 
 def generate_results(file, num_executions):
     algoritmos = {
         'AES_CBC': FileEncryptorAES_CBC,
         'AES_ECB': FileEncryptorAES_ECB,
-        'ChaCha20': FileEncryptor_ChaCha20
+        'ChaCha20': FileEncryptor_ChaCha20,
+        'RSA_OAEP': FileEncryptor_RSA_OAEP
     }
 
     encryption_times = []
