@@ -10,7 +10,7 @@ from Hashing import run_Hashing
 import subprocess
 import matplotlib.pyplot as plt
 from CipherDeciphering.run_encrypt_decrypt import generate_results
-from CipherDeciphering.plotter import plot_results
+from .CipherDeciphering.plotter import plot_results
 
 
 #--------------------------Gráficas de Cifrado-------------------------------------#

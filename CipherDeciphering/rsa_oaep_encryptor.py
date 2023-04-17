@@ -17,7 +17,6 @@ class FileEncryptor_RSA_OAEP:
             archivo = file.read()
 
         cipher = PKCS1_OAEP.new(key=self.publicKey)
-        self.nonce = cipher.nonce
         ciphertext = cipher.encrypt(archivo)
 
         cipherFile = self.name + '_RSA_OAEP.bin'
@@ -30,7 +29,7 @@ class FileEncryptor_RSA_OAEP:
         with open(self.name + '_RSA_OAEP.bin', "rb") as file:
             ciphertext = file.read()
 
-        decipher = PKCS1_OAEP.new(key=self.key, nonce=self.nonce)
+        decipher = PKCS1_OAEP.new(key=self.key)
         decrypted_file = decipher.decrypt(ciphertext)
 
         descipherFile = self.name + '_RSA_OAEP_desc' + self.ext
