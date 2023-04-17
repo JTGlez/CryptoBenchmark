@@ -9,7 +9,7 @@ from Signing import run_Signature
 from Hashing import run_Hashing
 import subprocess
 import matplotlib.pyplot as plt
-from CipherDeciphering.run_encrypt_decrypt import generate_results
+from CipherDeciphering.run_encrypt_decrypt import generate_results,generate_rsa_results
 from .CipherDeciphering.plotter import plot_results
 
 
@@ -21,6 +21,10 @@ for file in archivos_prueba:
     print(f"Procesando archivo {file}")
     labels, encryption_times, decryption_times = generate_results(file, num_executions)
     plot_results(file, labels, encryption_times, decryption_times, num_executions)
+
+print(f"Procesando archivo text.txt")
+labels, encryption_times, decryption_times = generate_rsa_results('TestVectors/text.txt', num_executions)
+plot_results(file, labels, encryption_times, decryption_times, num_executions)
 
 
 #--------------------------Gráficas de Firmado-------------------------------------#
