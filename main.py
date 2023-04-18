@@ -1,3 +1,9 @@
+# Benchmark de algoritmos criptográficos.
+
+# Autores: -Calderón Jiménez David
+#          -Cruz Rangel Leonardo Said
+#          -Téllez González Jorge Luis
+
 #Importación de bibliotecas.
 import subprocess
 import sys
