@@ -15,7 +15,7 @@ from CipherDeciphering.plotter import plot_results
 
 #--------------------------Gráficas de Cifrado-------------------------------------#
 archivos_prueba = ['TestVectors/file.pdf', 'TestVectors/img.PNG', 'TestVectors/text.txt']
-num_executions = 5
+num_executions = 100
 
 for file in archivos_prueba:
     print(f"Procesando archivo {file}")
