@@ -1,5 +1,5 @@
 
-<div align="center" width=50%>
+<div align="center" width=10%>
   <img src="https://user-images.githubusercontent.com/68305096/233254587-a15fc4f4-f90a-45ab-ac0e-a8063ec0fdd9.png"/>
 </div>
 <h1 align="center"> CryptoBenchmark :lock_with_ink_pen:	 </h1>
