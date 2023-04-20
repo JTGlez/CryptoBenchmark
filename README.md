@@ -1,6 +1,6 @@
 <h1 align="center"> CryptoBenchmark :lock_with_ink_pen:	 </h1>
 
-<img src="https://user-images.githubusercontent.com/68305096/233253614-1d3ba0df-d5a3-4f4d-87e3-4706f3137992.PNG">
+<img src="https://user-images.githubusercontent.com/68305096/233253614-1d3ba0df-d5a3-4f4d-87e3-4706f3137992.PNG" style= "margin: 0 auto;">
 
 # Introducción
 
