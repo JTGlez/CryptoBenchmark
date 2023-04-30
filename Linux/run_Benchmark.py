@@ -6,6 +6,7 @@
 
 #Importación de bibliotecas.
 from Signing import run_Signature
+import os
 from Hashing import run_Hashing
 import subprocess
 import matplotlib.pyplot as plt
@@ -17,14 +18,58 @@ from CipherDeciphering.plotter import plot_results
 archivos_prueba = ['/content/CryptoBenchmark/Linux/TestVectors/file.pdf', '/content/CryptoBenchmark/Linux/TestVectors/img.PNG', '/content/CryptoBenchmark/Linux/TestVectors/text.txt']
 num_executions = 100
 
+y = 0
 for file in archivos_prueba:
+    y = y + 1
     print(f"Procesando archivo {file}")
     labels, encryption_times, decryption_times = generate_results(file, num_executions)
-    plot_results(file, labels, encryption_times, decryption_times, num_executions)
+    colors = ['blue', 'green', 'red']
+
+    file_name = os.path.basename(file)  # Extraer solo el nombre del archivo
+
+    fig, ax = plt.subplots(1, 3, figsize=(20, 5), sharey=True)
+
+    for i in range(len(labels)):
+        # Graficar tiempos de cifrado
+        ax[i].bar(0, encryption_times[i], color=colors[i])
+        ax[i].set_xlabel("Cifrado")
+
+        # Graficar tiempos de descifrado
+        ax[i].bar(1, decryption_times[i], color=colors[i])
+        ax[i].set_xlabel("Descifrado")
+
+        ax[i].set_xticks([0, 1])
+        ax[i].set_xticklabels(["Cifrado", "Descifrado"])
+        ax[i].set_title(f'{labels[i]} para {file_name} ({num_executions} ejecuciones)')
+
+    ax[0].set_ylabel("Tiempo promedio (s)")
+    plt.savefig('ciphertest{}.png'.format(y), dpi=300)
+    plt.show()
 
 print(f"Procesando archivo text.txt")
 labels, encryption_times, decryption_times = generate_rsa_results('/content/CryptoBenchmark/Linux/TestVectors/text.txt', num_executions)
-plot_results(file, labels, encryption_times, decryption_times, num_executions)
+colors = ['blue', 'green', 'red']
+
+file_name = 'text.txt'  # Extraer solo el nombre del archivo
+
+fig, ax = plt.subplots(figsize=(20, 5), sharey=True)
+
+for i in range(len(labels)):
+    # Graficar tiempos de cifrado
+    ax.bar(0, encryption_times[i], color=colors[i])
+    ax.set_xlabel("Cifrado")
+
+    # Graficar tiempos de descifrado
+    ax.bar(1, decryption_times[i], color=colors[i])
+    ax.set_xlabel("Descifrado")
+
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels(["Cifrado", "Descifrado"])
+    ax.set_title(f'{labels} para {file_name} ({num_executions} ejecuciones)')
+
+ax.set_ylabel("Tiempo promedio (s)")
+plt.savefig('ciphertest4.png', dpi=300)
+plt.show()
 
 
 #--------------------------Gráficas de Firmado-------------------------------------#
@@ -64,6 +109,7 @@ fig.set_size_inches(10, 6)
 
 print(signing_times)
 # Mostrar la gráfica
+plt.savefig('firmatest.png', dpi=300)
 plt.show()
 
 #--------------------------Gráficas de Hashing (archivos)-------------------------------------#
@@ -105,6 +151,7 @@ fig.set_size_inches(10, 6)
 print(hashing_times)
 
 # Mostrar la gráfica
+plt.savefig('hashtest.png', dpi=300)
 plt.show()
 
 #--------------------------Gráficas de Hashing (contraseñas)-------------------------------------#
