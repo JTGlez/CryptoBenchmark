@@ -63,7 +63,8 @@ Adicionalmente, el proyecto puede ejecutarse por medio de Google Colab. En este 
 
 Las gráficas se guardarán en el directorio /content/ como se observa a continuación:
 
-![image](https://user-images.githubusercontent.com/68305096/235380983-0fd44e40-897b-4b0e-8bd3-c174f24830e7.png)
+![image](https://user-images.githubusercontent.com/68305096/235381304-a1e683ea-890e-4173-9c06-8ee7ebb7e31a.png)
+
 
 Si desea añadir otros archivos de distinta naturaleza, modifique la ruta del archivo en los scripts run_Benchmark y run_Signature.
 
