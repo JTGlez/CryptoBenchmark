@@ -1,6 +1,5 @@
 <h1 align="center"> CryptoBenchmark :lock_with_ink_pen:	 </h1>
 
-# Introducción
 
 CryptoBenchmark es un proyecto desarrollo dentro de la asignatura de Criptografía de la FI UNAM. Consiste en la implementación de los siguientes algoritmos de cifrado, descifrado, hasheo y firma digital:
 
