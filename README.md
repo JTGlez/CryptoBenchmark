@@ -53,6 +53,18 @@ archivoPDF = 'TestVectors/file.pdf'
 archivoIMG = 'TestVectors/img.png'
 ```
 
+Adicionalmente, el proyecto puede ejecutarse por medio de Google Colab. En este caso, ejecute el comando !git clone y la celda:
+
+```bash
+# Ejecuta el benchmark. Guarda las gráficas en el directo /content/, actualizar.
+!python CryptoBenchmark/Linux/main.py
+
+```
+
+Las gráficas se guardarán en el directorio /content/ como se observa a continuación:
+
+![image](https://user-images.githubusercontent.com/68305096/235380983-0fd44e40-897b-4b0e-8bd3-c174f24830e7.png)
+
 Si desea añadir otros archivos de distinta naturaleza, modifique la ruta del archivo en los scripts run_Benchmark y run_Signature.
 
 ## Autores
