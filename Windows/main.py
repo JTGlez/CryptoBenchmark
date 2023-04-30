@@ -29,7 +29,7 @@ install('ecdsa')
 install('cryptography')
 
 # Ejecución del script en el entorno virtual.
-subprocess.call(['python','./run_Benchmark.py'])
+subprocess.call(['python','Windows/run_Benchmark.py'])
 
 # Desactivación del entorno virtual.
-subprocess.call("deactivate", shell=True)
+subprocess.call('deactivate', shell=True)

@@ -14,7 +14,7 @@ from CipherDeciphering.plotter import plot_results
 
 
 #--------------------------Gráficas de Cifrado-------------------------------------#
-archivos_prueba = ['TestVectors/file.pdf', 'TestVectors/img.PNG', 'TestVectors/text.txt']
+archivos_prueba = ['Windows/TestVectors/file.pdf', 'Windows/TestVectors/img.PNG', 'Windows/TestVectors/text.txt']
 num_executions = 100
 
 for file in archivos_prueba:
@@ -23,7 +23,7 @@ for file in archivos_prueba:
     plot_results(file, labels, encryption_times, decryption_times, num_executions)
 
 print(f"Procesando archivo text.txt")
-labels, encryption_times, decryption_times = generate_rsa_results('TestVectors/text.txt', num_executions)
+labels, encryption_times, decryption_times = generate_rsa_results('Windows/TestVectors/text.txt', num_executions)
 plot_results(file, labels, encryption_times, decryption_times, num_executions)
 
 

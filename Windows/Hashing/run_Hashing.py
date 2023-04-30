@@ -1,8 +1,8 @@
 from Hashing import sha2_384, sha2_512, sha3_384, sha3_512, scrypt
 
-archivoTXT = 'TestVectors/text.txt'
-archivoPDF = 'TestVectors/file.pdf'
-archivoIMG = 'TestVectors/img.png'
+archivoTXT = 'Windows/TestVectors/text.txt'
+archivoPDF = 'Windows/TestVectors/file.pdf'
+archivoIMG = 'Windows/TestVectors/img.png'
 
 def hashingTime():
     """Obtiene el tiempo promedio de ejecución de cada algoritmo de hash usando una muestra de 100 ejecuciones"""
