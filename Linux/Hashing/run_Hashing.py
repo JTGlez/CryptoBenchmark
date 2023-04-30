@@ -2,7 +2,7 @@ from Hashing import sha2_384, sha2_512, sha3_384, sha3_512, scrypt
 
 archivoTXT = '/content/CryptoBenchmark/Linux/TestVectors/text.txt'
 archivoPDF = '/content/CryptoBenchmark/Linux/TestVectors/file.pdf'
-archivoIMG = '/content/CryptoBenchmark/Linux/TestVectors/img.png'
+archivoIMG = '/content/CryptoBenchmark/Linux/TestVectors/img.PNG'
 
 def hashingTime():
     """Obtiene el tiempo promedio de ejecución de cada algoritmo de hash usando una muestra de 100 ejecuciones"""
