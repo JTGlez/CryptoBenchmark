@@ -61,6 +61,8 @@ Adicionalmente, el proyecto puede ejecutarse por medio de Google Colab. En este 
 
 ```
 
+Enlace: https://colab.research.google.com/drive/15XAsx_5nkcKkQgp1e9qRT4wmdo6X4fn7?usp=sharing
+
 Las gráficas se guardarán en el directorio /content/ como se observa a continuación:
 
 ![image](https://user-images.githubusercontent.com/68305096/235381304-a1e683ea-890e-4173-9c06-8ee7ebb7e31a.png)
